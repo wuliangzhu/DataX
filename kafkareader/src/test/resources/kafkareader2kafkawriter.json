@@ -1,0 +1,44 @@
+{
+  "job": {
+    "setting": {
+      "speed": {
+        "channel": 3
+      },
+      "errorLimit": {
+        "record": 0,
+        "percentage": 0.02
+      }
+    },
+    "content": [
+      {
+        "reader": {
+        "name": "kafkareader",
+        "parameter": {
+          "bootstrapServers": "10.10.56.18:9092",
+          "topic": "kafka_udp_cmd",
+          "ack": "all",
+          "batchSize": 1000,
+          "retries": 0,
+          "keySerializer":"org.apache.kafka.common.serialization.StringSerializer",
+          "valueSerializer": "org.apache.kafka.common.serialization.StringSerializer",
+          "columns": "sourceAddrToString,HEAD,frameHead,frameType,sourceAddr,sourceType,targetAddr,targetType,datas"
+        }
+        },
+        "writer": {
+          "name": "kafkawriter",
+          "parameter": {
+            "bootstrapServers": "10.10.56.18:9092",
+            "topic": "kafka_udp_cmd_0",
+            "ack": "all",
+            "batchSize": 1000,
+            "retries": 0,
+            "keySerializer":"org.apache.kafka.common.serialization.StringSerializer",
+            "valueSerializer": "org.apache.kafka.common.serialization.StringSerializer",
+            "columns": "sourceAddrToString,HEAD,frameHead,frameType,sourceAddr,sourceType,targetAddr,targetType,datas"
+          }
+
+          }
+        }
+    ]
+      }
+    }

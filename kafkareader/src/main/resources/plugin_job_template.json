@@ -1,0 +1,15 @@
+{
+    "name": "kafkareader",
+    "parameter": {
+        "bootstrapServers": "",
+        "groupId": "datax_demo",
+        "topic": "",
+        "ack": "all",
+        "batchSize": 1000,
+        "retries": 0,
+        "keySerializer":"org.apache.kafka.common.serialization.StringSerializer",
+        "valueSerializer": "org.apache.kafka.common.serialization.StringSerializer",
+        "topicNumPartition": 1,
+        "columns": "sourceAddrToString,HEAD,frameHead,frameType,sourceAddr,sourceType,targetAddr,targetType,datas"
+    }
+}

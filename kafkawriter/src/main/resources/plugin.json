@@ -1,0 +1,7 @@
+{
+    "name": "kafkawriter",
+    "class": "com.alibaba.datax.plugin.writer.kafkawriter.KafkaWriter",
+    "description": "useScene: test. mechanism: use datax framework to transport data from kafka. warn: The more you know about the data, the less problems you encounter.",
+    "developer": "alibaba"
+}
+
